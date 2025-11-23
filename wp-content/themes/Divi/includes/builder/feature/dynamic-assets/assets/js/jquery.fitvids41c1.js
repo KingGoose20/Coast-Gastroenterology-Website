@@ -6,32 +6,20 @@
 * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
 * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
 *
-*/
-
-;(function( $ ){
-
-  'use strict';
-
-  $.fn.fitVids = function( options ) {
+*/;(function( $ ){  'use strict';  $.fn.fitVids = function( options ) {
     var settings = {
       customSelector: null,
       ignore: null
-    };
-
-    if(!document.getElementById('fit-vids-style')) {
+    };    if(!document.getElementById('fit-vids-style')) {
       // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
       var head = document.head || document.getElementsByTagName('head')[0];
       var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
       var div = document.createElement("div");
       div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
       head.appendChild(div.childNodes[1]);
-    }
-
-    if ( options ) {
+    }    if ( options ) {
       $.extend( settings, options );
-    }
-
-    return this.each(function(){
+    }    return this.each(function(){
       var selectors = [
         'iframe[src*="player.vimeo.com"]',
         'iframe[src*="youtube.com"]',
@@ -39,23 +27,13 @@
         'iframe[src*="kickstarter.com"][src*="video.html"]',
         'object',
         'embed'
-      ];
-
-      if (settings.customSelector) {
+      ];      if (settings.customSelector) {
         selectors.push(settings.customSelector);
-      }
-
-      var ignoreList = '.fitvidsignore';
-
-      if(settings.ignore) {
+      }      var ignoreList = '.fitvidsignore';      if(settings.ignore) {
         ignoreList = ignoreList + ', ' + settings.ignore;
-      }
-
-      var $allVideos = $(this).find(selectors.join(','));
+      }      var $allVideos = $(this).find(selectors.join(','));
       $allVideos = $allVideos.not('object object'); // SwfObj conflict patch
-      $allVideos = $allVideos.not(ignoreList); // Disable FitVids on this video.
-
-      $allVideos.each(function(){
+      $allVideos = $allVideos.not(ignoreList); // Disable FitVids on this video.      $allVideos.each(function(){
         var $this = $(this);
         if($this.parents(ignoreList).length > 0) {
           return; // Disable FitVids on this video.
