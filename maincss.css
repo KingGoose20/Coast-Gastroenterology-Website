@@ -1943,7 +1943,6 @@ a.et_pb_more_button:after {
 }.et_pb_button:hover,
 .et_pb_module .et_pb_button:hover {
     border: 2px solid transparent;
-    padding: .3em 2em .3em .7em
 }.et_pb_button:hover {
     background-color: hsla(0, 0%, 100%, .2)
 }.et_pb_bg_layout_light.et_pb_button:hover,
@@ -1953,7 +1952,6 @@ a.et_pb_more_button:after {
 .et_pb_button:before {
     font-size: 32px;
     line-height: 1em;
-    content: "\35";
     opacity: 0;
     position: absolute;
     margin-left: -1em;
@@ -2815,7 +2813,6 @@ nav.et-menu-nav,
 }#top-menu .menu-item-has-children>a:first-child:after,
 #et-secondary-nav .menu-item-has-children>a:first-child:after {
     font-family: 'ETmodules';
-    content: "3";
     font-size: 16px;
     position: absolute;
     right: 0;
