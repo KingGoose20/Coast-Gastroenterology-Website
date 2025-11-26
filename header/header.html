@@ -76,9 +76,47 @@
             <div id="et_mobile_nav_menu">
                 <div class="mobile_nav closed">
                     <span class="select_page">Select Page</span>
-                    <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+                    <a class="mobile_menu_bar mobile_menu_bar_toggle" id="mobile_menu_bar"></a>
                 </div>
             </div>
+
         </div> <!-- #et-top-navigation -->
     </div> <!-- .container -->
-</header> <!-- #main-header -->
+</header>
+<div id="mobile_menu" class="mobile-menu">
+    <ul>
+        <li><a href="/page1">Page 1</a></li>
+        <li><a href="/page2">Page 2</a></li>
+        <li><a href="/page3">Page 3</a></li>
+        <li><a href="/page4">Page 4</a></li>
+    </ul>
+</div> <!-- #main-header -->
+<style>
+    .mobile-menu {
+        display: none;
+        background: white;
+        border-top: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    .mobile-menu.open {
+        display: block;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-menu li {
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    .mobile-menu a {
+        text-decoration: none;
+        display: block;
+        color: #333;
+    }
+</style>

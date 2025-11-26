@@ -47,8 +47,11 @@ fetch(`${headerDir}/header.html`)
         // Insert modified header
         document.getElementById("header").innerHTML = container.innerHTML;
 
+
+
         // --- Wait for DOM to update ---
         requestAnimationFrame(() => {
+            initMobileMenu();
             const headerEl = document.getElementById("main-header");
             const pageContent = document.getElementById("page-container");
 
@@ -145,3 +148,15 @@ function initHideHeaderOnScroll(header) {
         lastScrollY = current;
     }, { passive: true });
 }
+
+function initMobileMenu() {
+    const burger = document.getElementById('mobile_menu_bar');
+    const mobileMenu = document.getElementById('mobile_menu');
+
+    burger.addEventListener('click', function () {
+        mobileMenu.classList.toggle('open');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initMobileMenu);
+

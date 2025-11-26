@@ -2647,7 +2647,6 @@ body #main-content .et_builder_inner_content>p {
 .form-submit .et_pb_button:after,
 .mobile_menu_bar:before,
 a.et_pb_more_button:after {
-    font-family: ETmodules !important;
     speak: none;
     font-style: normal;
     font-weight: 400;
@@ -5111,7 +5110,7 @@ body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header {
 }
 
 .mobile_menu_bar:before {
-    content: "a";
+    content: "\2630";
     font-size: 32px;
     position: relative;
     left: 0;
@@ -6427,7 +6426,6 @@ body.uiwebview .section_has_divider {
     font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
     font-weight: 700;
     font-size: 24px;
-    letter-spacing: 2px
 }
 
 .et_pb_text_9,
@@ -6535,7 +6533,7 @@ body.uiwebview .section_has_divider {
     .et_pb_text_6 h1,
     .et_pb_text_5 h1 {
         font-size: 25px;
-        line-height: 3px
+        line-height: 28px
     }
 
     .et_pb_divider_0 {
@@ -6558,4 +6556,12 @@ body.uiwebview .section_has_divider {
 
 .header-hidden {
     transform: translateY(-100%) !important; /* set to your header height */
+}
+
+
+
+.et_pb_button.et_pb_button_0, .et_pb_button.et_pb_button_1 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
