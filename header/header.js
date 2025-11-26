@@ -1,6 +1,6 @@
 const scriptPathH = document.currentScript.src;
-const script = document.currentScript;
-const activeMenu = script.dataset.activeMenu;
+const scriptH = document.currentScript;
+const activeMenuH = scriptH.dataset.activeMenuH;
 const headerDir = scriptPathH.substring(0, scriptPathH.lastIndexOf('/'));
 
 fetch(`${headerDir}/header.html`)
@@ -12,12 +12,12 @@ fetch(`${headerDir}/header.html`)
         // -----------------------------------------
         // Activate menu
         // -----------------------------------------
-        const el = container.querySelector(`#menu-item-${activeMenu}`);
+        const el = container.querySelector(`#menu-item-${activeMenuH}`);
         if (el) {
             el.classList.add("current-menu-item", "current_page_item");
         }
 
-        const activeMenuInt = parseInt(script.dataset.activeMenu, 10);
+        const activeMenuInt = parseInt(scriptH.dataset.activeMenuH, 10);
         if (activeMenuInt >= 4 && activeMenuInt <= 12) {
             const services = container.querySelector("#menu-item-3");
             if (services) {
@@ -70,6 +70,9 @@ function getDirDepth() {
     const path = window.location.pathname;
     const withoutFile = path.replace(/[^\/]+$/, "");
     const parts = withoutFile.split("/").filter(Boolean);
+    if (parts[0] === "Coast-Gastroenterology-Website") {
+        parts.splice(0, 1);
+    }
     return parts.length;
 }
 
