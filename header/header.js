@@ -52,6 +52,7 @@ fetch(`${headerDir}/header.html`)
         // --- Wait for DOM to update ---
         requestAnimationFrame(() => {
             initMobileMenu();
+            createDropDownMenu();
             const headerEl = document.getElementById("main-header");
             const pageContent = document.getElementById("page-container");
 
@@ -159,4 +160,16 @@ function initMobileMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', initMobileMenu);
+
+function createDropDownMenu() {
+    const dropDown = document.getElementById("dropdown-main");
+    const mainNav = document.getElementById('top-menu'); // Assuming your <ul> has an ID
+    const listItems = mainNav.querySelectorAll('li');
+    console.log(listItems);
+
+    listItems.forEach(item => {
+        if (parseInt(item.id.slice(10)) >= 4 && parseInt(item.id.slice(10)) <= 12) return; // Skip non-services items
+        dropDown.appendChild(item.cloneNode(true));
+    });
+}
 

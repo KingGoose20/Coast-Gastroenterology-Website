@@ -84,14 +84,17 @@
     </div> <!-- .container -->
 </header>
 <div id="mobile_menu" class="mobile-menu">
-    <ul>
-        <li><a href="/page1">Page 1</a></li>
-        <li><a href="/page2">Page 2</a></li>
-        <li><a href="/page3">Page 3</a></li>
-        <li><a href="/page4">Page 4</a></li>
+    <ul id="dropdown-main">
     </ul>
 </div> <!-- #main-header -->
 <style>
+    @media screen and (min-width: 980px) {
+        .mobile-menu.open {
+            display: none !important;
+        }
+
+    }
+
     .mobile-menu {
         display: none;
         background: white;
@@ -118,5 +121,11 @@
         text-decoration: none;
         display: block;
         color: #333;
+    }
+
+    @media screen and (max-width: 980px) {
+        .current-menu-item>a {
+            color: #16a39e !important;
+        }
     }
 </style>
