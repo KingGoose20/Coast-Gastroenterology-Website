@@ -18,16 +18,35 @@ fetch(`${headerDir}/header.html`)
         }
 
         const activeMenuInt = parseInt(scriptH.dataset.activeMenuH, 10);
-        if (activeMenuInt >= 4 && activeMenuInt <= 12) {
-            const services = container.querySelector("#menu-item-3");
+        if (activeMenuInt >= 7 && activeMenuInt <= 15) {
+            const services = container.querySelector("#menu-item-6");
             if (services) {
                 services.classList.add("current-menu-ancestor");
             }
         }
 
-        // If we're on menu 3, tag all 4–12 submenu links with "other-options"
-        if (activeMenuInt === 3) {
-            for (let i = 4; i <= 12; i++) {
+        if (activeMenuInt >= 3 && activeMenuInt <= 5) {
+            const services = container.querySelector("#menu-item-2");
+            if (services) {
+                services.classList.add("current-menu-ancestor");
+            }
+        }
+
+        // If we're on menu 6, tag all 7–15 submenu links with "other-options"
+        if (activeMenuInt === 6) {
+            for (let i = 7; i <= 15; i++) {
+                const li = container.querySelector(`#menu-item-${i}`);
+                if (!li) continue;
+
+                li.querySelectorAll("a").forEach(a => {
+                    a.classList.add("other-options");
+                });
+            }
+        }
+
+        // If we're on menu 2, tag all 3-5 submenu links with "other-options"
+        if (activeMenuInt === 2) {
+            for (let i = 3; i <= 5; i++) {
                 const li = container.querySelector(`#menu-item-${i}`);
                 if (!li) continue;
 
@@ -168,7 +187,7 @@ function createDropDownMenu() {
     console.log(listItems);
 
     listItems.forEach(item => {
-        if (parseInt(item.id.slice(10)) >= 4 && parseInt(item.id.slice(10)) <= 12) return; // Skip non-services items
+        if (parseInt(item.id.slice(10)) >= 7 && parseInt(item.id.slice(10)) <= 15) return; // Skip non-services items
         dropDown.appendChild(item.cloneNode(true));
     });
 }

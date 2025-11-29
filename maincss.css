@@ -6555,13 +6555,21 @@ body.uiwebview .section_has_divider {
 }
 
 .header-hidden {
-    transform: translateY(-100%) !important; /* set to your header height */
+    transform: translateY(-100%) !important;
+    /* set to your header height */
 }
 
 
 
-.et_pb_button.et_pb_button_0, .et_pb_button.et_pb_button_1 {
+.et_pb_button.et_pb_button_0,
+.et_pb_button.et_pb_button_1 {
     display: inline-block;
     width: 100%;
     text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+    .hide-on-mobile {
+        display: none;
+    }
 }
