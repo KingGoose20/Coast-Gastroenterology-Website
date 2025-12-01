@@ -1796,13 +1796,13 @@ body {
 
 /*!
 Theme Name: Divi
-Theme URI: https://www.elegantthemes.com/gallery/divi/
+Theme URI: http://www.elegantthemes.com/gallery/divi/
 Version: 4.27.4
 Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
 Author: Elegant Themes
-Author URI: https://www.elegantthemes.com
+Author URI: http://www.elegantthemes.com
 License: GNU General Public License v2
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 a,
 abbr,
@@ -4706,8 +4706,8 @@ body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header {
 }
 
 /*!
-* Animate.css - https://daneden.me/animate
-* Licensed under the MIT license - https://opensource.org/licenses/MIT
+* Animate.css - http://daneden.me/animate
+* Licensed under the MIT license - http://opensource.org/licenses/MIT
 * Copyright (c) 2015 Daniel Eden
 */
 @-webkit-keyframes flipInX {
@@ -6571,5 +6571,23 @@ body.uiwebview .section_has_divider {
 @media screen and (max-width: 980px) {
     .hide-on-mobile {
         display: none;
+    }
+}
+
+
+.heading-text {
+    z-index: 5;
+    white-space: nowrap;
+    font-size: 60px;
+    line-height: 65px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-family: Playfair Display;
+}
+
+@media screen and (max-width: 980px) {
+    .heading-text {
+        font-size: 45px;
+        line-height: 50px;
     }
 }

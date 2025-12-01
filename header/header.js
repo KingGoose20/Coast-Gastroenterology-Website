@@ -187,7 +187,7 @@ function createDropDownMenu() {
     console.log(listItems);
 
     listItems.forEach(item => {
-        if (parseInt(item.id.slice(10)) >= 7 && parseInt(item.id.slice(10)) <= 15) return; // Skip non-services items
+        if ((parseInt(item.id.slice(10)) >= 7 && parseInt(item.id.slice(10)) <= 15) || (parseInt(item.id.slice(10)) >= 3 && parseInt(item.id.slice(10)) <= 5)) return; // Skip non-services items
         dropDown.appendChild(item.cloneNode(true));
     });
 }
