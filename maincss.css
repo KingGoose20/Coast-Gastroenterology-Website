@@ -6591,3 +6591,19 @@ body.uiwebview .section_has_divider {
         line-height: 50px;
     }
 }
+
+
+.heading-mini-text {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: Raleway;
+}
+
+@media screen and (max-width: 980px) {
+    .heading-mini-text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
