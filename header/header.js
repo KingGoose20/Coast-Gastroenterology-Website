@@ -70,8 +70,8 @@ fetch(`${headerDir}/header.html`)
 
         // --- Wait for DOM to update ---
         requestAnimationFrame(() => {
-            initMobileMenu();
-            createDropDownMenu();
+            //initMobileMenu();
+            //createDropDownMenu();
             const headerEl = document.getElementById("main-header");
             const pageContent = document.getElementById("page-container");
 
