@@ -36,7 +36,6 @@ fetch(`${serviceDirS}/service.html`)
 
 // -------- Helper functions ----------
 function getDirDepth() {
-    console.log("b");
     const path = window.location.pathname;
     const withoutFile = path.replace(/[^\/]+$/, "");
     const parts = withoutFile.split("/").filter(Boolean);
