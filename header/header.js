@@ -18,7 +18,7 @@ fetch(`${headerDir}/header.html`)
     }
 
     const activeMenuInt = parseInt(scriptH.dataset.activeMenuH, 10);
-    if (activeMenuInt >= 7 && activeMenuInt <= 15) {
+    if (activeMenuInt >= 7 && activeMenuInt <= 21) {
       const services = container.querySelector("#menu-item-6");
       if (services) {
         services.classList.add("current-menu-ancestor");
@@ -32,9 +32,9 @@ fetch(`${headerDir}/header.html`)
       }
     }
 
-    // If we're on menu 6, tag all 7–15 submenu links with "other-options"
+    // If we're on menu 6, tag all 7–21 submenu links with "other-options"
     if (activeMenuInt === 6) {
-      for (let i = 7; i <= 15; i++) {
+      for (let i = 7; i <= 21; i++) {
         const li = container.querySelector(`#menu-item-${i}`);
         if (!li) continue;
 
