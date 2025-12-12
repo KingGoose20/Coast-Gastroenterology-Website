@@ -6607,3 +6607,9 @@ body.uiwebview .section_has_divider {
         line-height: 18px;
     }
 }
+
+@media (min-width:980px) {
+    .service-row {
+        border-bottom: 1px solid #000000;
+    }
+}
