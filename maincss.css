@@ -6601,6 +6601,6 @@ body.uiwebview .section_has_divider {
 
 @media (min-width:980px) {
     .service-row {
-        border-bottom: 1px solid #000000;
+        border-bottom: 1.5px solid #000000;
     }
 }
