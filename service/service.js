@@ -31,10 +31,7 @@ fetch(`${serviceDirS}/service.html`)
         // Insert modified service
         document.getElementById("service").innerHTML = container.innerHTML;
 
-    });
-
-
-// -------- Helper functions ----------
+    });// -------- Helper functions ----------
 function getDirDepth() {
     const path = window.location.pathname;
     const withoutFile = path.replace(/[^\/]+$/, "");
