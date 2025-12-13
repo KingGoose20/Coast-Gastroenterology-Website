@@ -6558,6 +6558,7 @@ body.uiwebview .section_has_divider {
     transform: translateY(-100%) !important;
     /* set to your header height */
 }
+
 .et_pb_button.et_pb_button_0,
 .et_pb_button.et_pb_button_1 {
     display: inline-block;
@@ -6569,7 +6570,9 @@ body.uiwebview .section_has_divider {
     .hide-on-mobile {
         display: none;
     }
-}.heading-text {
+}
+
+.heading-text {
     z-index: 5;
     white-space: nowrap;
     font-size: 60px;
@@ -6584,7 +6587,9 @@ body.uiwebview .section_has_divider {
         font-size: 45px;
         line-height: 50px;
     }
-}.heading-mini-text {
+}
+
+.heading-mini-text {
     padding-top: 10px;
     font-size: 20px;
     line-height: 22px;
@@ -6602,5 +6607,10 @@ body.uiwebview .section_has_divider {
 @media (min-width:980px) {
     .service-row {
         border-bottom: 1.5px solid #000000;
+    }
+
+    .services-dropdown {
+        max-height: 75vh;
+        overflow-y: scroll;
     }
 }
