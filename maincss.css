@@ -6559,8 +6559,6 @@ body.uiwebview .section_has_divider {
     /* set to your header height */
 }
 
-
-
 .et_pb_button.et_pb_button_0,
 .et_pb_button.et_pb_button_1 {
     display: inline-block;
@@ -6573,7 +6571,6 @@ body.uiwebview .section_has_divider {
         display: none;
     }
 }
-
 
 .heading-text {
     z-index: 5;
@@ -6592,7 +6589,6 @@ body.uiwebview .section_has_divider {
     }
 }
 
-
 .heading-mini-text {
     padding-top: 10px;
     font-size: 20px;
@@ -6610,6 +6606,11 @@ body.uiwebview .section_has_divider {
 
 @media (min-width:980px) {
     .service-row {
-        border-bottom: 1px solid #000000;
+        border-bottom: 1.5px solid #000000;
+    }
+
+    .services-dropdown {
+        max-height: 75vh;
+        overflow-y: scroll;
     }
 }
