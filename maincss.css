@@ -4083,7 +4083,13 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #top-menu li li a {
     padding: 6px 20px;
-    width: 200px
+    width: 200px;
+    border-bottom: 1px solid rgb(50,50,50);
+}
+
+#top-menu li li:last-child a {
+    border-bottom: none
+
 }
 
 .nav li.et-touch-hover>ul {
